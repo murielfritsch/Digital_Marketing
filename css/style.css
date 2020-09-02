@@ -1,0 +1,760 @@
+/* Body */
+
+/* makes the top-bar to stick to the window and the rest to stay */
+
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+.instagram-pics {
+	box-sizing: border-box;
+
+}
+
+body {
+	color: #2a2525;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+
+a {
+	color: #2a2525;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #833131;
+}
+
+ol, ul, li {
+	list-style: outside none none;
+}
+
+#top-bar, #SiteHeader, .container, #instagram-footer, #footer {
+	display: block;
+}
+
+/* Header */
+
+/* Top bar */
+
+.container {
+	margin: 0 auto;
+	width: 920px;
+}
+
+#top-bar {
+	background: #2a2525 none repeat scroll 0 0;
+	position: fixed;
+	width: 100%;
+}
+
+/* Where do I specify the height of my navigation bar? I mean in which class/id element? */
+
+#top-bar a {
+	color: white;
+}
+
+#top-bar a:hover {
+	color: #833131;
+}
+
+#nav-wrapper {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	font-size: 1.3em;
+}
+
+#u {
+
+}
+
+.menu-cat {
+	margin-right: 15px;
+	margin-left: 15px;
+	font-size: 20px;
+}
+
+.ubermenu-nav {
+	text-align: center;
+}
+
+.ubermenu-nav li {
+	display: inline-block;
+
+}
+
+/* Header */
+
+#SiteHeader {
+	padding-top: 100px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.container {
+	width: 920px;
+	text-align: center;
+}
+
+#logo {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+/* Main container */
+
+p .about {
+	text-align:justify;
+}
+
+h3 .about {
+	margin:5px;
+}
+
+#content {
+	margin: 10px 0 40px 0;
+	overflow: hidden;
+}
+
+.container #content {
+	width: 920px;
+}
+
+.featured-area {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+
+/* resize images */
+img.resize {
+  max-width:40%;
+  max-height:40%;
+}
+
+.container img {
+	width: 50%;
+}
+
+.featured-area img {
+	width: 100%;
+}
+
+
+
+
+
+/* Carousel Slider Test */
+
+.slide:nth-of-type(1){background-color: none;}
+	.slide:nth-of-type(2){background-color: yellow;}
+	.slide:nth-of-type(3){background-color: grey;}
+
+.slide{
+	width: 100%;
+	height: 100%;
+	transition: opacity 1s;
+	opacity: 0;
+}
+
+.showing {
+	opacity: 1;
+}
+
+
+/* End Carousel Slider Test */
+
+#main {
+	float: left;
+	width: 920px;
+}
+
+#main:children {
+	clear: both;
+}
+
+.grid-item {
+	width: 45%;
+	height: auto;
+	display: inline-block;
+	margin-right: 25px;
+}
+
+.post-img img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: center;
+}
+
+.post-header {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.post-img .post-header .cat .post-entry {
+	display: block;
+}
+
+.post {
+	text-align: justify;
+}
+
+#article-grid {
+	width: 100%;
+	vertical-align: top;
+}
+
+.sp-grid > li {
+	margin-right: 26px;
+	vertical-align: top;
+	width: 50%;
+	font-size: 0.7em;
+	display: flex;
+	flex-direction: row;
+}
+
+.title-divider {
+	border-top: 2px solid;
+	color: black;
+	display: block;
+	margin: 0 auto 15px;
+	max-width: 48px;
+}
+
+#pagination {
+	width: inherit;
+	text-align: right;
+}
+
+.older {
+	background-color: green;
+	width: inherit;
+}
+
+#sidebar {
+	float: right;
+	width: 300px;
+}
+
+/* Grid-test */
+
+.test-grid {
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: repeat (3, 1fr);
+	margin-bottom: 50px;
+}
+
+.one {
+background-color: pink;
+opacity: 0.8;
+}
+
+.two {
+background-color: #BB47A7;
+opacity: 0.8;
+}
+
+.three {
+background-color: grey;
+opacity: 0.8;
+}
+
+.four {
+background-color: #89AE8E;
+opacity: 0.8;
+}
+
+.test-grid2 {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+	". topbargrid topbargrid topbargrid ."
+	"headergrid headergrid headergrid headergrid headergrid"
+	". maingrid maingrid sidebargrid ."
+	"footersocialgrid footersocialgrid footersocialgrid footersocialgrid footersocialgrid"
+	"footergrid footergrid footergrid footergrid footergrid";
+	opacity: 0.5;
+}
+
+.item-a {
+	grid-area: topbargrid;
+	background-color: orange;
+}
+
+.item-b {
+	grid-area: headergrid;
+	background-color: red;
+}
+
+.item-c {
+	grid-area: maingrid;
+	background-color: yellow;
+}
+
+.item-d {
+	grid-area: sidebargrid;
+	background-color: green;
+}
+
+.item-e {
+	grid-area: footersocialgrid;
+	background-color: purple;
+}
+
+.item-f {
+	grid-area: footergrid;
+	background-color: blue;
+}
+
+
+/* Instagram Widget */
+
+.clearfix {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding-left:15px;
+	padding-right:15px;
+	position: relative;
+}
+
+
+#instagram-widget-title {
+	border-top: 1px solid black;
+	font: 11px Montserrat, arial, sans-serif;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#instagram-widget-title span {
+	position: relative;
+	top: -7px;
+	padding: 0 10px;
+	background: #fff;
+}
+
+
+
+.instagram_feed {
+	padding-left:5px;
+	padding-right:5px;
+	position: relative;
+}
+
+#instagram-gallery {
+
+
+}
+
+.instagram_gallery {
+	overflow: hidden;
+	margin-top:10px;
+}
+
+/* Instagram footer */
+
+.instagram_container {
+}
+
+
+/* Footer */
+
+#footer {
+	background-color: #2a2525;
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	padding: 12px 0 12px 0;
+}
+
+.footer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#footer a {
+	color: white;
+}
+
+#footer a:hover {
+	color: #833131;
+}
+
+.social-element {
+	margin: 0 25px 0 25px;
+}
+
+#Youtube img {
+	padding-bottom: 6px;
+}
+
+a img {
+	border: medium none;
+}
+
+@media screen and (max-width: 925px) and (min-width:500px)
+{
+
+	body {
+		font-size: 11px;
+	}
+
+
+	a {
+		font-size: 1em;
+	}
+
+
+	.container {
+		margin: 0 auto;
+		width: 460px;
+		text-align: center;
+	}
+
+	/* Top bar */
+
+	#top-bar {
+		height: 40px;
+		position: fixed;
+	}
+
+	#top-bar .container {
+		width: 360px;
+	}
+
+	#nav-wrapper {
+		margin-top: 12px;
+		margin-bottom: 5px
+		max-width: 330px;
+		font-size: 1.3em;
+	}
+
+	.menu-cat {
+		margin-right: 7px;
+		margin-left: 7px;
+		font-size: 1em;
+	}
+
+	.ubermenu-nav {
+		text-align: center;
+	}
+
+	.ubermenu-nav li {
+		display: inline-block;
+	}
+
+	/* Header */
+
+	#SiteHeader {
+		padding-top: 65px;
+		text-align: center;
+	}
+
+	#SiteHeader > .container {
+		width: 360px;
+		text-align: center;
+	}
+
+	.container img {
+		width: 75%;
+	}
+
+	.featured-area img {
+		width: 100%;
+	}
+
+	/* Main container */
+
+	#content {
+		padding-bottom: 40px;
+		overflow: hidden;
+		display: inline-block;
+/*
+		display: block;
+*/
+		clear: both;
+
+	}
+
+	.container #content {
+		width: 360px;
+		margin: 0 auto;
+	}
+
+	.featured-area.nopromo {
+		width: 360px;
+		margin-bottom: 15px;
+	}
+
+	#main {
+		width: 360px;
+	}
+
+	#article-grid {
+		width: 100%;
+		float:none;
+		vertical-align: top;
+	}
+
+	.grid-item {
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
+	}
+
+	.post-img img {
+		height: auto;
+		max-width: 100%;
+		vertical-align: center;
+	}
+
+	.post-header {
+		text-align: center;
+	}
+
+	.post-entry .post-img .post-header .cat {
+		display: block;
+	}
+
+	.sp-grid > li {
+		margin-right: 3px;
+		vertical-align: top;
+		width: 50%;
+		font-size: 1em;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.title-divider {
+		border-top: 1px solid;
+		color: black;
+		display: block;
+		margin: 0 auto 10px;
+		max-width: 18px;
+	}
+
+	.older {
+		text-align: right;
+	}
+
+	#sidebar {
+		width: 160px;
+	}
+
+	/* Instagram footer */
+
+	.instagram_container {
+	}
+
+	/* Footer */
+
+	#footer {
+		font-size: 1em;
+		padding: 12px 0 12px 0;
+	}
+
+	.social-element {
+		margin: 0 7px 0 7px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 500px)
+{
+
+	body {
+		font-size: 0.5em;
+	}
+
+
+	/* Top bar */
+
+/* In this version, make the menu disappear when scrolling down*/
+
+	.container {
+		width: 280px;
+/*
+		margin: 0 auto;
+		*/
+	}
+
+	#top-bar {
+		height: inherit;
+		position: fixed;
+	}
+
+	#top-bar .container {
+		background: #2a2525 none repeat scroll 0 0;
+		width: 100%;
+	}
+
+	#nav-wrapper {
+		margin-top: 12px;
+		margin-bottom: 5px
+		max-width: 250px;
+		font-size: 1.1em;
+	}
+
+	.menu-cat {
+		margin-right: 4px;
+		margin-left: 4px;
+		font-size: 1.9em;
+	}
+
+	.ubermenu-nav {
+		text-align: center;
+	}
+
+	.ubermenu-nav li {
+		display: block;
+		margin: 7px 7px;
+	}
+
+	/* Header */
+
+	#SiteHeader {
+		text-align: center;
+		padding-top: 32%;
+	}
+
+	#SiteHeader > .container {
+		width: 280px;
+		text-align: center;
+	}
+
+	.container > #logo {
+		width: 100%;
+	}
+
+	.container img {
+		width: 100%;
+	}
+
+
+	.featured-area img {
+		width: 100%;
+	}
+
+	/* Main container */
+
+	#content {
+		padding-bottom: 40px;
+		overflow: hidden;
+		clear: both;
+	}
+
+	.container #content {
+		width: 280px;
+		margin: 0 auto;
+	}
+
+	.featured-area.nopromo {
+		width: 280px;
+		margin-bottom: 15px;
+	}
+
+	#content {
+	display: block;
+	}
+
+	#main {
+		width: 280px;
+	}
+
+	.grid-item {
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
+	}
+
+	.post-img img {
+		height: auto;
+		max-width: 100%;
+		vertical-align: center;
+	}
+
+	.post-header {
+		text-align: center;
+	}
+
+	.grid-item .post-header .cat {
+		display: block;
+		text-align: center;
+	}
+
+	#article-grid {
+		width: 100%;
+		float:none;
+		vertical-align: top;
+	}
+
+	.sp-grid > li {
+		margin-right: 3px;
+		vertical-align: top;
+		width: 50%;
+		font-size: 0.9em;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.title-divider {
+		border-top: 1px solid;
+		color: black;
+		display: block;
+		margin: 0 auto 10px;
+		max-width: 18px;
+	}
+
+	.older {
+		text-align: right;
+	}
+
+	#sidebar {
+		width: inherit;
+		float: ;
+		clear: both;
+		text-align: center;
+	}
+
+	/* Instagram footer */
+
+	.instagram_container {
+	}
+
+
+	/* Footer */
+
+	#instagram-footer {
+		background-color: yellow;
+		font-size: 1.1em;
+		overflow: hidden;
+
+	}
+
+	#instagram-footer .instagram-pics li {
+		display: block;
+		width: 12.5%;
+	}
+
+	#instagram-footer .instagram-pics li img {
+		width: 280px;
+		vertical-align: middle;
+	}
+
+	#footer {
+		font-size: 1.6em;
+
+	}
+
+	.social-element {
+		margin: 0 4px 0 4px;
+	}
+}
